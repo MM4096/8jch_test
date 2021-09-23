@@ -1,0 +1,74 @@
+﻿.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: 50%;
+        margin-left: -60px;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+
+div p {
+    float: left;
+}
+
+.grid {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    padding: 3px;
+    grid-gap: 3px;
+    background-color: #000000;
+}
+
+    .grid > div {
+        float: left;
+        font-size: 20px;
+        background-color: #FFFFFF
+    }
+    div image {
+        width:200px;
+        height: 200px;
+    }
+
+button {
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+    padding: 5px 10px;
+    color: #000000;
+}
+
+    button:disabled {
+        color: #999999;
+        border-color: #999999
+    }
+
+a {
+    text-decoration: none;
+    color: black;
+    background-color: none;
+}
+.important {
+    color: #FF0000;
+}
+.saleBanner {
+    background-color: #FF0000;
+    width: auto;
+    height: 100px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+}
