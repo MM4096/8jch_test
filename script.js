@@ -3,12 +3,12 @@ var allowCookies = 1;
 function accepted() {
     allowCookies = 1;
     document.getElementById("cookieFooter").style.visibility = "hidden";
-    setCookie("cookiesEnabled", 1, 365);
+    hardSetCookie("cookiesEnabled", 1, 365);
 }
 function notAccepted() {
     allowCookies = 0;
     document.getElementById("cookieFooter").style.visibility = "hidden";
-    setCookie("cookiesEnabled", 0, 365);
+    hardSetCookie("cookiesEnabled", 0, 365);
 }
 function setCookie(cookieName, cookieValue, cookieValidDays) {
     let allowCookie = getCookie('cookiesEnabled')
@@ -18,6 +18,14 @@ function setCookie(cookieName, cookieValue, cookieValidDays) {
         let expires = "expires=" + day.toUTCString();
         document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
     }
+
+}
+function hardSetCookie(cookieName, cookieValue, cookieValidDays) {
+
+        const day = new Date();
+        day.setTime(day.getTime() + (cookieValidDays * 24 * 60 * 60 * 1000));
+        let expires = "expires=" + day.toUTCString();
+        document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
 
 }
 function getCookie(cookieName) {
