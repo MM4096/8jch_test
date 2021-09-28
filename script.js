@@ -37,6 +37,7 @@ function checkCookie() {
     allowCookies = getCookie("cookiesEnabled");
 }
 function getCookieValue(cookieName) {
-    let value = getCookie(cookieName)
+    let value = getCookie(cookieName);
+    window.alert(value);
     document.getElementById("returnCookieValue").innerHTML = value;
 }
