@@ -49,5 +49,31 @@ a {
     color: #ffffff;
     font-weight: bold;
 }
+.orderItemContainer {
+    margin: 20px 20px 0 0;
+    border: 5px solid #333333;
+    overflow: auto;
+}
+/*Thumb short for thumbnail*/
+.postThumb {
+    float: left;
+}
 
+    .postThumb img {
+        display: block;
+        width: 200px;
+        height: auto;
+    }
 
+.postContent {
+    margin-left: 210px
+}
+
+.cookieAccept {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: yellow;
+}
