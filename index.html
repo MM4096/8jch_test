@@ -13,42 +13,9 @@
         <button onclick="accepted()">Accept</button>
         <button onclick="notAccepted()">Don't Accept</button>
     </div>
-<script>
-    var allowCookies = 1;
-    function accepted() {
-        allowCookies = 1;
-        document.getElementById("cookieFooter").style.visibility = "hidden";
-        setCookie("cookiesEnabled", allowCookies, 365);
-    }
-    function notAccepted() {
-        allowCookies = 0;
-        document.getElementById("cookieFooter").style.visibility = "hidden";
-        setCookie("cookiesEnabled", allowCookies, 365);
-    }
-    function setCookie(cookieName, cookieValue, cookieValidDays) {
-        const day = new Date();
-        day.setTime(day.getTime() + (cookieValidDays * 24 * 60 * 60 * 1000));
-        let expires = "expires=" + day.toUTCString();
-        document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
-    }
-    function getCookie(cookieName) {
-        let name = cookieName + "=";
-        let ca = document.cookie.split(";");
-        for (let i = 0; i < ca.length; i++) {
-            let c = ca[i]
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
-            }
-        }
-        return "";
-    }
-    function checkCookie() {
-        let allowedCookie = getCookie("cookiesEnabled");
-        window.alert(allowedCookie)
-    }
+    <button onlick="getCookie('visited')">Press here!</button>
+    <p id="returnCookieValue"></p>
+<script src="script.js">
 </script>
 </body>
 </html>
