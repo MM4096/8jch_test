@@ -1,12 +1,9 @@
 
-var allowCookies = 1;
 function accepted() {
-    allowCookies = 1;
     document.getElementById("cookieFooter").style.visibility = "hidden";
     setCookie("cookiesEnabled", 1, 365);
 }
 function notAccepted() {
-    allowCookies = 0;
     document.getElementById("cookieFooter").style.visibility = "hidden";
     setCookie("cookiesEnabled", 0, 365);
 }
