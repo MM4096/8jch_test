@@ -49,6 +49,7 @@ a {
     color: #ffffff;
     font-weight: bold;
 }
+
 .orderItemContainer {
     margin: 20px 20px 0 0;
     border: 5px solid #333333;
@@ -59,11 +60,11 @@ a {
     float: left;
 }
 
-    .postThumb img {
+.postThumb img {
         display: block;
         width: 200px;
         height: auto;
-    }
+}
 
 .postContent {
     margin-left: 210px
