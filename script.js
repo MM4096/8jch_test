@@ -3,15 +3,16 @@ var allowCookies = 1;
 function accepted() {
     allowCookies = 1;
     document.getElementById("cookieFooter").style.visibility = "hidden";
-    setCookie("cookiesEnabled", allowCookies, 365);
+    setCookie("cookiesEnabled", 1, 365);
 }
 function notAccepted() {
     allowCookies = 0;
     document.getElementById("cookieFooter").style.visibility = "hidden";
-    setCookie("cookiesEnabled", allowCookies, 365);
+    setCookie("cookiesEnabled", 0, 365);
 }
 function setCookie(cookieName, cookieValue, cookieValidDays) {
-    if (allowCookies == 1) {
+    let allowCookie = getCookie("cookiesEnabled")
+    if (allowCookie == 1) {
         const day = new Date();
         day.setTime(day.getTime() + (cookieValidDays * 24 * 60 * 60 * 1000));
         let expires = "expires=" + day.toUTCString();
@@ -32,9 +33,6 @@ function getCookie(cookieName) {
         }
     }
     return "";
-}
-function checkCookie() {
-    allowCookies = getCookie("cookiesEnabled");
 }
 function getCookieValue(cookieName) {
     let value = getCookie(cookieName);
