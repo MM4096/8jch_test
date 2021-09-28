@@ -32,8 +32,11 @@ function getCookie(cookieName) {
         }
     }
     return "";
-    document.getElementById("returnCookieValue").innerHTML = c;
 }
 function checkCookie() {
     allowCookies = getCookie("cookiesEnabled");
+}
+function getCookieValue(cookieName) {
+    let value = getCookie(cookieName)
+    document.getElementById("returnCookieValue").innerHTML = value;
 }
