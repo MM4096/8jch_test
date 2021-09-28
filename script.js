@@ -1,11 +1,11 @@
 
 function accepted() {
     document.getElementById("cookieFooter").style.visibility = "hidden";
-    setCookie("cookiesEnabled", 1, 365);
+    setCookie("cookiesEnabled", '1', 365);
 }
 function notAccepted() {
     document.getElementById("cookieFooter").style.visibility = "hidden";
-    setCookie("cookiesEnabled", 0, 365);
+    setCookie("cookiesEnabled", '1', 365);
 }
 function setCookie(cookieName, cookieValue, cookieValidDays) {
     let allowCookie = getCookie("cookiesEnabled")
