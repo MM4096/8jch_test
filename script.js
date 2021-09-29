@@ -15,7 +15,7 @@ function notAccepted() {
 }
 function setCookie(cookieName, cookieValue, cookieValidDays) {
     let allowCookie = getCookie('cookiesEnabled')
-    if (allowCookie == 1) {
+    if (allowCookie == "1") {
         const day = new Date();
         day.setTime(day.getTime() + (cookieValidDays * 24 * 60 * 60 * 1000));
         let expires = "expires=" + day.toUTCString();
