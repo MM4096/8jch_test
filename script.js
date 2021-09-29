@@ -1,5 +1,8 @@
 
 var allowCookies = 1;
+var itemCost;
+var numberItems;
+var totalCost;
 function accepted() {
     allowCookies = 1;
     document.getElementById("cookieFooter").style.visibility = "hidden";
@@ -49,4 +52,21 @@ function getCookieValue(cookieName) {
     let value = getCookie(cookieName);
     window.alert(value);
     document.getElementById("returnCookieValue").innerHTML = value;
+}
+function calculateCost(itemNumber) {
+    const costs = [
+        0,
+        //cost of item 1
+        1,
+        //cost of item 2
+        1.5,
+    ]
+    itemCost = costs[itemNumber];
+    numberItems = +document.getElementById("qty").value;
+    totalCost = itemCost * numberItems;
+    document.getElementById("cost").innerHTML = "Add " + numberItems + " to cart for $" + totalCost;
+}
+function updateCookie(cookieName) {
+    setCookie("cookieName", numberItems, 365);
+
 }

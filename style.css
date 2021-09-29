@@ -27,6 +27,12 @@ button {
     padding: 5px 10px;
     color: #000000;
 }
+input {
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+    padding: 5px 10px;
+    color: #000000;
+}
 
     button:disabled {
         color: #999999;
@@ -62,12 +68,18 @@ a {
 
 .postThumb img {
         display: block;
-        width: 200px;
-        height: auto;
+        width: 500px;
+        height: 500px;
 }
 
 .postContent {
-    margin-left: 210px
+    margin-left: 510px
+}
+.postTitle {
+    font-weight: bold;
+    font-size: 200%;
+    padding: 9px;
+    background: #ccc;
 }
 
 .cookieAccept {
