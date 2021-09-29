@@ -99,6 +99,7 @@ a {
     border: 1px solid #000000;
     width: 100px;
     cursor: pointer;
+    display: inline-block;
 }
 .itemView img {
     width: 100px;

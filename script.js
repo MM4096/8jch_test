@@ -59,7 +59,7 @@ function calculateCost(itemNumber) {
         //cost of item 1
         1,
         //cost of item 2
-        1.5,
+        1,
     ]
     itemCost = costs[itemNumber];
     numberItems = +document.getElementById("qty").value;
