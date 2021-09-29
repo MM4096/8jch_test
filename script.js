@@ -67,6 +67,6 @@ function calculateCost(itemNumber) {
     document.getElementById("cost").innerHTML = "Add " + numberItems + " to cart for $" + totalCost;
 }
 function updateCookie(cookieName) {
-    setCookie(cookieName, numberItems, 365);
+    hardSetCookie(cookieName, numberItems, 365);
 
 }
