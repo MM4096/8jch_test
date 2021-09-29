@@ -10,14 +10,23 @@
 </head>
 <body>
     <p><strong>WELCOME TO THE TEST PAGE!</strong></p>
-    <a href="testPage.html">Press here</a>
+    <div class="itemView" onclick="window.location='testPage.html'">
+        <img src="displayImage.jpg" />
+        <p>Lorem Ipsum dolor sit amet</p>
+    </div>
+
+
+
+
+
+
+
     <div class="cookieAccept" id="cookieFooter">
         <p>This page uses cookies to improve your experience. Enable cookies?</p>
         <button onclick="accepted()">Accept</button>
         <button onclick="notAccepted()">Don't Accept</button>
     </div>
-    <button onclick="getCookieValue('visited')">Lastly,Press here!</button>
-    <p id="returnCookieValue">Hello</p>
+
 
 </body>
 </html>
