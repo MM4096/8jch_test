@@ -1,5 +1,5 @@
 
-var allowCookies = 1;
+var allowCookies = 0;
 var itemCost;
 var numberItems;
 var totalCost;
