@@ -57,9 +57,13 @@ function calculateCost(itemNumber) {
     const costs = [
         0,
         //cost of item 1
-        1,
+        1, //lolly scramble
         //cost of item 2
-        1,
+        1, //licorice allsorts
+        //cost of item 3
+        0.5, // Chocolate favorates
+        //cost of item 4
+        0.5, //chupa chups
     ]
     itemCost = costs[itemNumber];
     numberItems = +document.getElementById("qty").value;
