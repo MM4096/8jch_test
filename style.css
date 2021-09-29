@@ -1,1 +1,125 @@
-﻿
+﻿.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: 50%;
+        margin-left: -60px;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+
+button {
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+    padding: 5px 10px;
+    color: #000000;
+    cursor: pointer;
+}
+
+    button:active {
+        border: 5px solid #000000;
+    }
+
+input {
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+    padding: 5px 10px;
+    color: #000000;
+}
+
+button:disabled {
+    color: #999999;
+    border-color: #999999
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    background-color: none;
+}
+
+.important {
+    color: #FF0000;
+}
+
+.saleBanner {
+    background-color: #FF0000;
+    width: auto;
+    height: 100px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.orderItemContainer {
+    margin: 20px 20px 0 0;
+    border: 5px solid #333333;
+    overflow: auto;
+}
+/*Thumb short for thumbnail*/
+.postThumb {
+    float: left;
+}
+
+    .postThumb img {
+        display: block;
+        width: 500px;
+        height: 500px;
+    }
+
+.postContent {
+    margin-left: 510px
+}
+
+.postTitle {
+    font-weight: bold;
+    font-size: 200%;
+    padding: 9px;
+    background: #ccc;
+}
+
+.cookieAccept {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: yellow;
+}
+
+.itemView {
+    display: inline-block;
+    margin: 10px 10px;
+    border: 1px solid #000000;
+    width: 100px;
+    cursor: pointer;
+}
+
+    .itemView img {
+        width: 100px;
+        height: 100px;
+        margin: 0px 0px;
+        padding: 0px 0px;
+    }
+
+    .itemView p {
+        padding: 0px 0px;
+        margin: 0px, 0px;
+        text-overflow: ellipsis;
+        width: 100px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
