@@ -76,6 +76,14 @@ function updateCookie(cookieName) {
     setCookie(cookieName, numberItems, 365);
 
 }
+function cookieFooter() {
+    let x = getCookie("cookiesEnabled");
+    if (x == 1) {
+        document.getElementById("cookieFooter").style.visibility = "hidden"
+    } else {
+        document.getElementById("cookieFooter").style.visibility = "visible"
+    }
+}
 
 
 
@@ -101,7 +109,7 @@ var x = setInterval(function () {
 
     // Output the result in an element with id="demo"
     document.getElementById("demo").innerHTML = days + "days " + hours + "hours "
-        + minutes + "minutes " + seconds + "sseconds ";
+        + minutes + "minutes " + seconds + "seconds ";
 
     // If the count down is over, write some text 
     if (distance < 0) {
