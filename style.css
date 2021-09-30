@@ -123,3 +123,28 @@ a {
         overflow: hidden;
         white-space: nowrap;
     }
+    .navbar {
+        overflow: hidden;
+        background-color: #ffff00;
+        display: inline-block;
+        width: 100%;
+    }
+    .navbar a {
+        float: left;
+        display: block;
+        background-color: #ffff00;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        color: #000000;
+    }
+    .navbar a:hover {
+        background-color: #999900;
+        color: #ffffff;
+    }
+    .navbar img {
+        margin: 1px 1px;
+        width: 44px;
+        height: 44px;
+        float: left;
+    }
