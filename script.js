@@ -76,7 +76,7 @@ function updateCookie(cookieName) {
     setCookie(cookieName, numberItems, 365);
 
 }
-function cookieFooter() {
+function cookieFooterToggle() {
     let x = getCookie("cookiesEnabled");
     if (x == 1) {
         document.getElementById("cookieFooter").style.visibility = "hidden"
@@ -84,5 +84,3 @@ function cookieFooter() {
         document.getElementById("cookieFooter").style.visibility = "visible"
     }
 }
-
-
