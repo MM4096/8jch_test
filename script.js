@@ -86,6 +86,8 @@ function cookieFooterToggle() {
 }
 function fillIn() {
     const itemNames = [
+        //blank for 0
+        "",
         //Name of item 1
         "Lolly Scrambles",
 
