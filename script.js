@@ -107,5 +107,5 @@ function fillIn() {
 function getCookiePush(cookieName, redirectDestination, itemName) {
 
     var x = getCookie(cookieName);
-    document.getElementById(redirectDestination).innerHTML = itemNames[i] + x;
+    document.getElementById(redirectDestination).innerHTML = itemName + " " + x;
 }
