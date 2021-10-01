@@ -99,19 +99,44 @@ function getCookiePush(cookieName, redirectDestination) {
     document.getElementById(redirectDestination).value = x;
 }
 function updateAllCookies() {
-    let costs = [];
     for (var i = 1; i < 6; i++) {
         var cookieUpdate = "item" + i;
         var cookieUpdateValue = document.getElementById("option" + i).value;
         setCookie(cookieUpdate, cookieUpdateValue, 365);
-        costs[i] = calculateCost(i);
     }
-    var total = 0;
-    var add;
-    for (var a = 1; a < costs.length + 1; a++) {
-        add = costs[a];
-        total += add;
-    }
-    document.getElementById("total").innerHTML = "$" + total;
+    calculateCostRedirect();
     
+}
+function calculateCostRedirect() {
+    let qty = []
+    for (var i = 1; i < 6; i++) {
+        var getID = "option" + i;
+        qty[i] = +document.getElementById(getID).value
+    }
+    const costs = [
+        0,
+        //cost of item 1
+        1, //lolly scramble
+        //cost of item 2
+        1, //licorice allsorts
+        //cost of item 3
+        0.5, // Chocolate favorates
+        //cost of item 4
+        0.5, //chupa chups
+        //cost of item 5
+        0.5, //Sour candy
+    ]
+    let eachOrderCost = [];
+    for (var a = 1; a < 6; a++) {
+        itemCost = costs[a];
+        numberItems = +document.getElementById("option" + a).value;
+        eachOrderCost[a] = itemCost * numberItems;
+    }
+    var currentTotal = 0;
+    var add;
+    for (var b = 1; b < 6; b++) {
+        add = eachOrderCost[b];
+        currentTotal += add;
+    }
+    document.getElementById("total").innerHTML = "$" + currentTotal;
 }
