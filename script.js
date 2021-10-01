@@ -85,6 +85,7 @@ function cookieFooterToggle() {
     }
 }
 function fillIn() {
+    updateAllCookies();
     for (var i = 1; i < 6; i++) {
         var itemName = "item" + i;
         var redirectDestination = "option" + i;
@@ -98,9 +99,19 @@ function getCookiePush(cookieName, redirectDestination) {
     document.getElementById(redirectDestination).value = x;
 }
 function updateAllCookies() {
+    let costs = [];
     for (var i = 1; i < 6; i++) {
         var cookieUpdate = "item" + i;
         var cookieUpdateValue = document.getElementById("option" + i).value;
         setCookie(cookieUpdate, cookieUpdateValue, 365);
+        costs[i] = calculateCost(i);
     }
+    var total = 0;
+    var add;
+    for (var a = 1; a < costs.length + 1; a++) {
+        add = costs[a];
+        total += add;
+    }
+    document.getElementById("total").innerHTML = "$" + total;
+    
 }
