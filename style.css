@@ -148,3 +148,15 @@ a {
         height: 44px;
         float: left;
     }
+    /*The below is for grid*/
+    .gridContainer {
+        display: grid;
+        grid-template-columns: auto, auto;
+        padding: 10px
+    }
+    .gridItem {
+        border: 1px solid #000000;
+        padding: 20px;
+        font-size: 20px;
+        text-align: center;
+    }
