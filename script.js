@@ -85,7 +85,7 @@ function cookieFooterToggle() {
     }
 }
 function fillIn() {
-    for (var i = 1; i < 7; i++) {
+    for (var i = 1; i < 6; i++) {
         var itemName = "item" + i;
         var redirectDestination = "option" + i;
         getCookiePush(itemName, redirectDestination)
