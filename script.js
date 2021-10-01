@@ -85,7 +85,6 @@ function cookieFooterToggle() {
     }
 }
 function fillIn() {
-    updateAllCookies();
     for (var i = 1; i < 6; i++) {
         var itemName = "item" + i;
         var redirectDestination = "option" + i;
