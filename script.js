@@ -3,6 +3,7 @@ var allowCookies = 0;
 var itemCost;
 var numberItems;
 var totalCost;
+var currentTotal
 function accepted() {
     allowCookies = 1;
     document.getElementById("cookieFooter").style.visibility = "hidden";
@@ -131,7 +132,7 @@ function calculateCostRedirect() {
         numberItems = +document.getElementById("option" + a).value;
         eachOrderCost[a] = itemCost * numberItems;
     }
-    var currentTotal = 0;
+    currentTotal = 0;
     var add;
     for (var b = 1; b < 6; b++) {
         add = eachOrderCost[b];
