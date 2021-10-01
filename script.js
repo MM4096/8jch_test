@@ -95,7 +95,7 @@ function fillIn() {
 }
 function getCookiePush(cookieName, redirectDestination) {
 
-    var x = parseInt(getCookie(cookieName), 10);
+    var x = Number(getCookie(cookieName));
     document.getElementById(redirectDestination).value = x;
 }
 function updateAllCookies() {
