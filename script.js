@@ -97,3 +97,10 @@ function getCookiePush(cookieName, redirectDestination) {
     var x = parseInt(getCookie(cookieName));
     document.getElementById(redirectDestination).value = x;
 }
+function updateAllCookies() {
+    for (var i = 1; i < 6; i++) {
+        var cookieUpdate = "item" + i;
+        var cookieUpdateValue = document.getElementById("option" + i).value;
+        setCookie(cookieUpdate, cookieUpdateValue, 365);
+    }
+}
