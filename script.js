@@ -85,13 +85,27 @@ function cookieFooterToggle() {
     }
 }
 function fillIn() {
+    const itemNames = [
+        //Name of item 1
+        "Lolly Scrambles",
+
+        "Licorice Allsorts",
+
+        "Chocolate Favorates",
+
+        "Chupa Chups",
+
+        "Sour Candy",
+    ]
     for (var i = 1; i < 6; i++) {
         var itemName = "item" + i;
         var redirectDestination = "option" + i;
-        getCookiePush(itemName, redirectDestination)
+        getCookiePush(itemName, redirectDestination, itemNames[i])
+
     }
 }
-function getCookiePush(cookieName, redirectDestination) {
+function getCookiePush(cookieName, redirectDestination, itemName) {
+
     var x = getCookie(cookieName);
-    document.getElementById(redirectDestination).innerHTML = x;
+    document.getElementById(redirectDestination).innerHTML = itemNames[i] + x;
 }
