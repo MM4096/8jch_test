@@ -84,3 +84,14 @@ function cookieFooterToggle() {
         document.getElementById("cookieFooter").style.visibility = "visible"
     }
 }
+function fillIn() {
+    for (var i = 1; i < 7; i++) {
+        var itemName = "item" + i;
+        var redirectDestination = "option" + i;
+        getCookiePush(itemName, redirectDestination)
+    }
+}
+function getCookiePush(cookieName, redirectDestination) {
+    var x = getCookie(cookieName);
+    document.getElementById(redirectDestination).innerHTML = x;
+}
