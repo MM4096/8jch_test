@@ -140,3 +140,23 @@ function calculateCostRedirect() {
     }
     document.getElementById("total").innerHTML = "$" + currentTotal;
 }
+function sendOrder() {
+    let itemQuantity = [];
+    var sendString;
+    for (var i = 1; i < 6; i++) {
+        itemQuantity[i] = document.getElementById("option" + i).value;
+    }
+    var name = prompt("Please enter your name", getCookie("savedName"))
+    var formClass = prompt("Please enter your form class", getCookie('formClass'));
+    setCookie("formClass", formClass, 365);
+    setCookie("savedName", name, 365);
+    sendString = itemQuantity.join();
+    //Sends the email
+    var link = "mailto:leo.xu@kingsway.school.nz"
+        + "?cc=enoch.wu@kingsway.school.nz"
+        + "&subject=" + encodeURIComponent("Order")
+        + "&body=" + encodeURIComponent("Please press <SEND>\r\r\r\r" + sendString + "," + name + "," + formClass)
+        ;
+
+    window.location.href = link;
+}
