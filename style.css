@@ -151,7 +151,7 @@ a {
     /*The below is for grid*/
     .gridContainer {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto  auto;
         padding: 10px
     }
     .gridItem {
