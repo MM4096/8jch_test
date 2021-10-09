@@ -74,7 +74,20 @@ function calculateCost(itemNumber) {
     document.getElementById("cost").innerHTML = "Add " + numberItems + " to cart for $" + totalCost;
 }
 function updateCookie(cookieName) {
-    setCookie(cookieName, numberItems, 365);
+    var cookies = getCookie("cookiesEnabled");
+    if (cookies == "1") {
+        if (numberItems > -1 && Math.round(numberItems) == numberItems) {
+            var addedItems = parseInt(getCookie(cookieName));
+
+            setCookie(cookieName, numberItems += addedItems, 365);
+        } else {
+            window.alert("Unable to update cart. Reason #0011 - Updated invalid value")
+        }
+    } else {
+        window.alert("Unable to update cart. Reason #0100 - Cookies not enabled.")
+    }
+    
+    
 
 }
 function cookieFooterToggle() {

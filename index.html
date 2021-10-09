@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home</title>
+    <title>
+        Home - 75 Cents
+    </title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon"  href="logo.jpg"/>
     <script src="script.js">
@@ -11,13 +13,12 @@
 </head>
 <body onload="cookieFooterToggle()">
     <div class="navbar">
-        <img src="logo.jpg" />
-        <a href="index.html">75 Cents</a>
+        <img src="displayLogo.jpg" />
         <a href="index.html">Home</a>
         <a href="cart.html">Cart</a>
+         
     </div>
-
-    <p><strong>WELCOME TO THE TEST PAGE!</strong>(INDEV stage)</p>
+   
     <div class="itemView" onclick="window.location='viewItemLollyScramble.html'">
         <img src="lollyScramble.jpg" />
         <p>Lolly Scramble</p>
@@ -42,12 +43,13 @@
 
 
 
-    <a href="change.html">Changes</a>
 
     <div class="cookieAccept" id="cookieFooter">
         <p>This page uses cookies to improve your experience. Enable cookies?</p>
         <button onclick="accepted()">Accept</button>
         <button onclick="notAccepted()">Don't Accept</button>
+        <br />
+        <small>Several features will be unavalible if you disable. These include the "add to cart" button.</small>
     </div>
 
 
