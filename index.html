@@ -6,17 +6,28 @@
     </title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon"  href="logo.jpg"/>
-    <script src="script.js">
-    </script>
+    <script src="script.js"></script>
+    <script src="jquery-3.6.0.js"></script>
+    <script src="jquery.js"></script>
     <style>
     </style>
 </head>
 <body onload="cookieFooterToggle()">
     <div class="navbar">
         <img src="displayLogo.jpg" />
+
         <a href="index.html">Home</a>
-        <a href="cart.html">Cart</a>
-        <a href="change.html">Changes</a>
+
+        <a href="cart.html">Cart 
+        <div id="newCartItems"><p>11234567890 new</p></div>
+        </a>
+         
+    </div>
+    <div id="salesCountdown" hidden>
+        <h6>This will never show up!</h6>
+        <h2>TOTALLY A SALE!</h2>
+        <h3>0% off all items!</h3>
+        <p id="timeLeft">Neither will this</p>
     </div>
    
     <div class="itemView" onclick="window.location='viewItemLollyScramble.html'">
@@ -39,7 +50,6 @@
         <img src="sourCandy.jpg" />
         <p>Sour Candy</p>
     </div>
-
 
 
 
