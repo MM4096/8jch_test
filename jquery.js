@@ -1,6 +1,6 @@
 $(document).ready(function () {
     
-    const items = ["","chocolate favorates", "chupa chups", "licorice allsorts", "lolly scramble", "mystery box", "sour candy"];
+    
     $("#cost").click(function () {
         var txt = $("#cost").text();
         if (added == 1) {
@@ -16,24 +16,22 @@ $(document).ready(function () {
 
     $("#search").on("keypress", function (e) {
         if (e.which == 13) {
-            console.log("started!")
-            var searchVal = $("#search").val();
-            var searchValue = searchVal.toLowerCase();
-            console.log(searchValue);
-            for (let i = 1; i < 7; i++) {
-                console.log("started search")
-                console.log(i);
-                if (items[i].includes(searchValue)) {
-                    console.log("true")
-                    $("#" + i).show
-                } else {
-                    console.log("false")
-                    $("#" + i).hide
-                }
+            search();                     
             }
-                
-
-                                
-            }
-        })
     })
+})
+function search() {
+    const items = ["", "chocolate favorates", "chupa chups", "licorice allsorts", "lolly scramble", "mystery box", "sour candy"];
+    var searchVal = $("#search").val();
+    var searchValue = searchVal.toLowerCase();
+    $("#result").show();
+    $("#result").text("Search results for " + searchVal + ":");
+    for (let i = 1; i < 7; i++) {
+        var id = "o" + i;
+        if (items[i].includes(searchValue)) {
+            $("#" + id).show();
+        } else {
+            $("#" + id).hide();
+        }
+    }
+}
