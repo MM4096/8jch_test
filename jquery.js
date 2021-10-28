@@ -14,11 +14,12 @@ $(document).ready(function () {
     //search function
     //Made by me!
 
-    $("#search").on("keypress", function (e) {
-        if (e.which == 13) {
-            search();                     
-            }
-    })
+    $("#search").change(function () { search() })
+    //Disable if something new to demo
+    window.alert("Nothing to test! Come again later. This will redirect you back to the main page.");
+    window.location.href = "https://mm4096.github.io/";
+
+
 })
 function search() {
     const items = ["", "chocolate favorates", "chupa chups", "licorice allsorts", "lolly scramble", "mystery box", "sour candy"];
