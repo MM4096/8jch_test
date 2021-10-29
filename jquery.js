@@ -21,7 +21,7 @@ $(document).ready(function () {
     console.log(getCookie("biscut"))
     if (getCookie("biscut") == "") {
         var code = window.prompt("Nothing to test! Come again later. This will redirect you back to the main page.", "");
-        if (code == abc123) {
+        if (code == "biscut") {
             setCookie("biscut", 1, 365);
         }
         window.location.href = "https://mm4096.github.io/";
