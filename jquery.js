@@ -19,7 +19,7 @@ $(document).ready(function () {
 
     //Disable if something new to demo
     console.log(getCookie("biscut"))
-    if (parseInt(getCookie("biscut")) == "") {
+    if (getCookie("biscut") == "") {
         var code = window.prompt("Nothing to test! Come again later. This will redirect you back to the main page.", "");
         if (code == abc123) {
             setCookie("biscut", 1, 365);
