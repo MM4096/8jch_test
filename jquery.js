@@ -23,8 +23,10 @@ $(document).ready(function () {
         var code = window.prompt("Nothing to test! Come again later. This will redirect you back to the main page.", "");
         if (code == "biscut") {
             setCookie("biscut", 1, 365);
+        } else {
+            window.location.href = "https://mm4096.github.io/";
         }
-        window.location.href = "https://mm4096.github.io/";
+        
     }
     
     
