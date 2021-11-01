@@ -16,19 +16,29 @@ $(document).ready(function () {
 
     $("#search").change(function () { search() })
 
-
+    var testPageOpen = 1;
     //Disable if something new to demo
-    console.log(getCookie("biscut"))
-    if (getCookie("biscut") == "") {
-        var code = window.prompt("Nothing to test! Come again later. This will redirect you back to the main page.", "");
-        if (code == "biscut") {
-            setCookie("biscut", 1, 365);
-        } else {
-            window.location.href = "https://mm4096.github.io/";
+    if (testPageOpen = 0) {
+
+
+        console.log(getCookie("biscut"))
+        if (getCookie("biscut") == "") {
+            var code = window.prompt("Nothing to test! Come again later. This will redirect you back to the main page.", "");
+            if (code == "biscut") {
+                setCookie("biscut", 1, 365);
+            } else {
+                window.location.href = "https://mm4096.github.io/";
+            }
+
         }
-        
     }
-    
+    $("#showPassword").click(function () {
+        if ($("#password").attr("type") == "password") {
+            $("#password").prop("type", "text");
+        } else {
+            $("#password").prop("type", "password");
+        }
+    })
     
 
 

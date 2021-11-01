@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>75 Cents > Login / Sign Up</title>
+    <title>
+        Home - 75 Cents
+    </title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="logo.jpg" />
+    <script src="script.js"></script>
+    <script src="loginControl.js"></script>
+    <script src="jquery-3.6.0.js"></script>
+    <script src="jquery.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="displayLogo.jpg" />
+
+        <a href="index.html">Home</a>
+
+        <a href="cart.html">
+            Cart
+            <div id="newCartItems"><p>11234567890 new</p></div>
+        </a>
+        <a href="https://mm4096.github.io/8jch_test/">Visit our test page!</a>
+        <div class="t">
+            <div class="search">
+                <input type="search" id="search" placeholder="Search for an item by name..." />
+                <button id="enter" onclick="search()">Search</button>
+            </div>
+        </div>
+        <a href="login.html" class="login">Log in (ALPHA)</a>
+        </div>
+        
+
+    <div id="loginBody">
+        <h3>Log in:</h3>
+        <label for="username">Enter your username:</label>
+        <input id="username" placeholder="Enter username..." />
+        <br />
+        <label for="password">Enter your password:</label>
+        <input id="password" placeholder="Enter password..." type="password" />
+        <label for="checkPassword">  Show Password</label>
+        <input id="showPassword" type="checkbox" />
+        <br />
+        <button id="login" onclick="login()">Log me in!</button>
+    </div>
+
+
+        
+</body>
+</html>
