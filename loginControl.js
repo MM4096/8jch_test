@@ -11,8 +11,6 @@ function login() {
     var loggedIn = 0;
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
-    localStorage.setItem("username", username);
-    localStorage.setItem("password", password);
     console.log(username);
     console.log(password);
     for (var i = 0; i < usernames.length; i++) {
