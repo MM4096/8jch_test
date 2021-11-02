@@ -40,7 +40,7 @@ $(document).ready(function () {
         }
     })
     if (sessionStorage.getItem("loggedIn") == "true") {
-        $(".login").text(localStorage.getItem("username"))
+        $(".login").text("Signed into: " + localStorage.getItem("username"))
     }
     
 
