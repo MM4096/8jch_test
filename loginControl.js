@@ -13,8 +13,6 @@ function login() {
     var password = document.getElementById("password").value;
     console.log(username);
     console.log(password);
-    localStorage.setItem("username", username)
-    localStorage.setItem("password", password)
     for (var i = 0; i < usernames.length; i++) {
         if ((usernames[i] === username) && (passwords[i] === password)) {
             console.log("Logged In!")
