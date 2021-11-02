@@ -39,7 +39,7 @@ $(document).ready(function () {
             $("#password").prop("type", "password");
         }
     })
-    if (sessionStorage.getItem("loggedIn") == true) {
+    if (sessionStorage.getItem("loggedIn") == "true") {
         $(".login").text(localStorage.getItem("username"))
     }
     

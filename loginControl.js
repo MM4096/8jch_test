@@ -26,6 +26,6 @@ function login() {
         document.getElementById("login").innerText = "Failed"
     } else {
         document.getElementById("login").innerText = "Signed In!"
-        sessionStorage.setItem("loggedIn", true);
+        sessionStorage.setItem("loggedIn", "true");
     }
 }
