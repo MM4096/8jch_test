@@ -34,8 +34,8 @@
             </div>
         </div>
         <a href="login.html" class="login">Log in (ALPHA)</a>
-        </div>
-        
+    </div>
+
 
     <div id="loginBody">
         <h3>Log in:</h3>
@@ -48,9 +48,28 @@
         <input id="showPassword" type="checkbox" />
         <br />
         <button id="login" onclick="login()">Log me in!</button>
+        <br />
+
     </div>
 
+    <div id="signupBody" hidden>
+        <h3>Sign Up:</h3>
 
-        
+        <label for="nUsername">Create a username</label>
+        <input id="nUsername" placeholder="Create a username" />
+        <span id="erUser" hidden>&#215; Username has to be 3-10 digits long</span>
+        <br />
+
+        <label for="nPassword">Create a password</label>
+        <input id="nPassword" placeholder="Create a password" />
+        <span id="erPass" hidden>&#215; Password has to be 5-20 digits long</span>
+        <br />
+        <button onclick="signup()">Sign me up!</button>
+        <br />
+        <p>Note that this doesn't work!</p>
+    </div>
+    <button id="signupToggle" onclick="loginToggle()">No account? Sign up here!</button>
+
+
 </body>
 </html>
