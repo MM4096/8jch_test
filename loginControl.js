@@ -29,5 +29,6 @@ function login() {
     } else {
         document.getElementById("login").innerText = "Signed In!"
         sessionStorage.setItem("loggedIn", "true");
+        window.location.href = "https://mm4096.github.io/8jch_test/login.html"
     }
 }

@@ -39,6 +39,8 @@ $(document).ready(function () {
             $("#password").prop("type", "password");
         }
     })
+
+    
     if (sessionStorage.getItem("loggedIn") == "true") {
         $(".login").text("Signed into: " + localStorage.getItem("username"))
     }
