@@ -43,11 +43,14 @@ function signup() {
     } else {
         $("#erUser").hide();
     }
-    if (nPassword.length < 5 || nPassword.length > 20) {
+    if (nPassword.length < 5 || nPassword.length > 10) {
         success = 0
         $("#erPass").show();
     } else {
         $("#erPass").hide();
+    }
+    if (localStorage.getItem("username") != "") {
+        success = 0;
     }
     if (success == 1) {
         var link = "mailto:enoch.wu@kingsway.school.nz"
