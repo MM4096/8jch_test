@@ -1,10 +1,12 @@
 const usernames = [
     0,
     "admin",
+    "mm4096/admin"
 ]
 const passwords = [
     0,
     "adminAccess",
+    "adminAccess"
 ]
 function login() {
     
@@ -35,7 +37,7 @@ function signup() {
     var nPassword = document.getElementById("nPassword").value;
     var email = document.getElementById("email").value;
     var success = 1;
-    if (nUsername.length < 4 || nUsername > 10) {
+    if (nUsername.length < 4 || nUsername.length > 10) {
         success = 0;
         $("#erUser").show();
     } else {
