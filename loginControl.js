@@ -37,7 +37,7 @@ function signup() {
     var nPassword = document.getElementById("nPassword").value;
     var email = document.getElementById("email").value;
     var success = 1;
-    if (nUsername.length < 4 || nUsername.length > 10) {
+    if (nUsername.length < 4 || nUsername.length > 20) {
         success = 0;
         $("#erUser").show();
     } else {
