@@ -115,7 +115,7 @@ a {
         padding: 0px 0px;
         margin: 0px, 0px;
         text-overflow: ellipsis;
-        width: 100px;
+        width: 150px;
         overflow: hidden;
         white-space: nowrap;
     }
