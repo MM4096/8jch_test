@@ -9,10 +9,11 @@
     </title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="logo.jpg" />
-    <script src="script.js"></script>
-    <script src="loginControl.js"></script>
+
     <script src="jquery-3.6.0.js"></script>
     <script src="jquery.js"></script>
+    <script src="script.js"></script>
+    <script src="loginControl.js"></script>
     <style>
     </style>
 </head>
@@ -33,7 +34,7 @@
                 <button id="enter" onclick="search()">Search</button>
             </div>
         </div>
-        <a href="login.html" class="login">Log in (ALPHA)</a>
+        <a href="login.html" class="login">Log in (BETA)</a>
     </div>
 
 
@@ -63,6 +64,9 @@
         <label for="nPassword">Create a password</label>
         <input id="nPassword" placeholder="Create a password" />
         <span id="erPass" hidden>&#215; Password has to be 5-20 digits long</span>
+        <br />
+        <label for="email">Enter your email</label>
+        <input id="email" type="email"  placeholder="example.domain.com"/>
         <br />
         <button onclick="signup()">Sign me up!</button>
         <br />

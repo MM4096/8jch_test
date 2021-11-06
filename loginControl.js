@@ -30,3 +30,32 @@ function login() {
         window.location.href = "https://mm4096.github.io/8jch_test/login.html"
     }
 }
+function signup() {
+    var nUsername = document.getElementById("nUsername").value;
+    var nPassword = document.getElementById("nPassword").value;
+    var email = document.getElementById("email").value;
+    var success = 1;
+    if (nUsername.length < 4 || nUsername > 10) {
+        success = 0;
+        $("#erUser").show();
+    } else {
+        $("#erUser").hide();
+    }
+    if (nPassword.length < 5 || nPassword.length > 20) {
+        success = 0
+        $("#erPass").show();
+    } else {
+        $("#erPass").hide();
+    }
+    if (success == 1) {
+        var link = "mailto:enoch.wu@kingsway.school.nz"
+            + "?cc=enoch.wu@kingsway.school.nz"
+            + "&subject=" + encodeURIComponent("Signup")
+            + "&body=" + encodeURIComponent("Please press <SEND>\r\r\r\r" + nUsername + "," + nPassword + "," + email)
+            ;
+
+        window.location.href = link;
+    }
+    localStorage.setItem("username", nUsername)
+    localStorage.setItem("password", nPassword)
+}

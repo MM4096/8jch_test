@@ -68,8 +68,8 @@ function loginToggle() {
     $("#loginBody").toggle();
     $("#signupBody").toggle();
     if ($("#loginBody:visible").length == 0) {
-        $("#signupToggle").text("No Account? Sign up Here!")
-    } else {
         $("#signupToggle").text("Already have an account? Log in!")
+    } else {
+        $("#signupToggle").text("No Account? Sign up Here!")
     }
 }
