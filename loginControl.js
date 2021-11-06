@@ -44,7 +44,7 @@ function signup() {
         $("#erUser").hide();
     }
     if (nPassword.length < 5 || nPassword.length > 10) {
-        success = 0
+        success = 0 
         $("#erPass").show();
     } else {
         $("#erPass").hide();
